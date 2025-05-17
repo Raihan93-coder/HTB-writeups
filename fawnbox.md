@@ -15,14 +15,14 @@
 - Use nmap to scan the ports of the given taget ip
     ```bash
     sudo nmap -sV -v {target ip}
-- After the found that port 21 is open
+- After that found that port 21 is open
 - Entering the system by exploiting the misconfiguration in FTP
-- Using anonymouse allows to enter the system as a legit user without the requirment of password
+- Using anonymouse ,allows you to enter the system as a legit user without the requirment of password
 - command for entering
     ```bash
      ftp {target ip}
 - Enter anonymouse and then any password of your choice which allows you access to FTP shell
-- Then to find the directory and navigate the directory sue
+- Then to find the directory and navigate the directory using
     ```bash
     ls
     cd {dir}
