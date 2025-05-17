@@ -17,8 +17,8 @@
     sudo nmap -sV -v {target ip}
 - After the found that port 21 is open
 - Entering the system by exploiting the misconfiguration in FTP
-      - Using anonymouse allows to enter the system as a legit user without the requirment of password
-      - command for entering
-            ```bash
-              ftp {target ip}
+- Using anonymouse allows to enter the system as a legit user without the requirment of password
+- command for entering
+```bash
+ ftp {target ip}
   
