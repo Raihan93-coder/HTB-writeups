@@ -19,6 +19,23 @@
 - Entering the system by exploiting the misconfiguration in FTP
 - Using anonymouse allows to enter the system as a legit user without the requirment of password
 - command for entering
-```bash
- ftp {target ip}
-  
+    ```bash
+     ftp {target ip}
+- Enter anonymouse and then any password of your choice which allows you access to FTP shell
+- Then to find the directory and navigate the directory sue
+    ```bash
+    ls
+    cd {dir}
+- After that find the file that is required in this case flag.txt
+- After finding use
+  ```bash
+  get flag.txt
+- The file will be then downloaded and stored in your system
+- veiw the contents of the file in your system by typing
+  ```bash
+  cat flag.txt
+
+ ## Recomended fixes
+ > Use SFTP for more secure file transfer
+ > Patch up the insecurity of anonymouse login into the system
+
