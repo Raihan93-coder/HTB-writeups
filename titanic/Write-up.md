@@ -23,7 +23,7 @@ void _init() {
   nmap -sV -v {ip address}
   ```
 - Note: Using the sV flag is for version detection which is always useful because can search in the web for past vulnareblity of that version
-- The result of the nmap scan is in this link 👉 [nmap_scan_result](./nmap_scan.txt)
+- The result of the nmap scan is in this link 👉 [nmap_scan_result](./analysed_data/nmap_scan.txt)
 ## 💡Step 2 (Web analysis)
 - Before starting analysis updated the etc/hosts
   ```bash
@@ -37,7 +37,7 @@ void _init() {
 - Did some manual enumeration using the earlier data and found out that /download?ticket= is an endpoint
 - For further analysis used burp suite and dirsearch and conformed that there was subdomain called dev.titanic.htb (☠️note: unfortuanately couldn't capture the records of burp suite)
 - While doing the analysis using burp suite in the newly found endpoint used some payloads like ../../../etc/passwd and found a file
-- the file got from the payload 👉 [etc/passwd.txt](./ticket.txt)
+- the file got from the payload 👉 [etc/passwd.txt](./analysed_data/ticket.txt)
 - Notice that there is a user called as developer
 - To get the user flag we use a payload ../../../home/developer/user.txt to obtain the flag
 - In the dev.titanic.htb subdomian we found the application used is gitea to upload 2 git repoaitory
@@ -48,13 +48,13 @@ void _init() {
     >  2) Did some simple sql injection using the payload developer'# (success)
 - Then analysed the git hub repose and found the path way to the database
 - Then downloaded the database using the endpoint download?ticket=
-- The obtained database 👉 [database](./developer_db.db)
+- The obtained database 👉 [database](./analysed_data/developer_db.db)
 ## 🔐Step 5 (Brute-forcing)
 - Using the bash command
   ```bash
   sqlite3 {name_of_database} "select passwd,salt,name from user" | while read data; do digest=$(echo "$data" | cut -d'|' -f1 | xxd -r -p | base64); salt=$(echo "$data" | cut -d'|' -f2 | xxd -r -p | base64); name=$(echo $data | cut -d'|' -f 3); echo "${name}:sha256:50000:${salt}:${digest}"; done | tee hashes.txt
   ```
-- The above shown output will be saved to an hashes.txt file 👉 [hashes.txt](./hashes.txt)
+- The above shown output will be saved to an hashes.txt file 👉 [hashes.txt](./analysed_data/hashes.txt)
 - As we analyze the hash found out that this is a pkbdf2 hash with salt and has undergone 50000 iteration, so i wrote a custom python program and used rockyou.txt
 - custom python program 👉 [hash_decode.py](./custom_tool/hash_decode.py)
 ## Step 6 (Foothold)
