@@ -27,6 +27,7 @@ filter
 check-availability
 checkout
 payment
+download
 payment/status
 payment/success
 payment/failure
