@@ -24,4 +24,12 @@ void _init() {
   ```
 - Note: Using the sV flag is for version detection which is always useful because can search in the web for past vulnareblity of that version
 - The result of the nmap scan is in this link 👉 [nmap_scan_result](./nmap_scan.txt)
-- 
+## 💡Step 2 (Web analysis)
+- Before starting analysis updated the etc/hosts
+  ```bash
+  sudo echo "{ip address}    titanic.htb" > etc/hosts
+  ```
+- Registred in the site to see output and found out that you can directly download things from the site
+## 💻Step 3 (Enumeration)
+- Used a custom made python script and wordlist that aling mostly to tourism and booking site
+- custom python script 👉 [enumeration.py](./custom_tool/enumeration.py)
