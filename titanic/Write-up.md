@@ -33,3 +33,9 @@ void _init() {
 ## 💻Step 3 (Enumeration)
 - Used a custom made python script and wordlist that aling mostly to tourism and booking site
 - custom python script 👉 [enumeration.py](./custom_tool/enumeration.py)
+- Found out that 2 addtional webpage are present that is the book and download
+- Did some manual enumeration using the earlier data and found out that /download?ticket= is an endpoint
+- For further analysis used burp suite and dirsearch and conformed that there was subdomain called dev.titanic.htb (☠️note: unfortuanately couldn't capture the records of burp suite)
+- While doing the analysis using burp suite in the newly found endpoint used some payloads like ../../../etc/passwd and found a file
+- the file got from the payload 👉 [etc/passwd.txt](./ticket.txt)
+  
