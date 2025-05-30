@@ -23,5 +23,5 @@ void _init() {
   nmap -sV -v {ip address}
   ```
 - Note: Using the sV flag is for version detection which is always useful because can search in the web for past vulnareblity of that version
-- The result of the nmap scan is in this link 👉 [nmap_scan_result](./titanic/nmap_scan.txt)
+- The result of the nmap scan is in this link 👉 [nmap_scan_result](./nmap_scan.txt)
 - 
