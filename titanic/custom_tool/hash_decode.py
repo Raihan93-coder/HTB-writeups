@@ -8,7 +8,7 @@ salt = base64.b64decode("i/PjRSt4VE+L7pQA1pNtNA==")
 iterations = 50000
 
 # a custom wordlist to find the password
-file_path = "custom_tool/wordlist.txt"
+file_path = "/usr/share/wordlists/rockyou.txt"
 
 with open(file_path, "r") as f:
     for word in f:
