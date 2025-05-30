@@ -1,2 +1,4 @@
 # 📖HTB-writeups
-This is my writeups of the HTB(hack the box) labs i do to improve my skill in ethical hacking
+## 📈Labs
+- ![fawnbox](./fawnbox/Write-up.md)
+- ![Titanic](./titanic/Write-up.md)
