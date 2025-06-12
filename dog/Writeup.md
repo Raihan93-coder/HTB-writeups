@@ -10,4 +10,12 @@
   ```bash
   nmap -sV -v {ip address}
   ```
-- The result of the nmap scan is [](./photo/nmap_scan.png)
+- The result of the nmap scan is  ![](./photo/nmap_scan.png)
+- The ssh and http ports are open
+
+## 🖥️Step 2 (Web enumeration)
+- Used Gobuster to enumerate the webpage
+  ```bash
+  dirsearch -u http://dog.htb/
+  ```
+- 
