@@ -1,0 +1,59 @@
+# Dirsearch started Fri Jun  6 10:55:02 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://10.10.11.58/?q= -e php,txt,bak,sql,zip --force-extensions
+
+301   309B   http://10.10.11.58/.git    -> REDIRECTS TO: http://10.10.11.58/.git/
+200   409B   http://10.10.11.58/.git/branches/
+200    95B   http://10.10.11.58/.git/COMMIT_EDITMSG
+200   604B   http://10.10.11.58/.git/
+200    23B   http://10.10.11.58/.git/HEAD
+200    73B   http://10.10.11.58/.git/description
+200    92B   http://10.10.11.58/.git/config
+200   455B   http://10.10.11.58/.git/info/
+200   240B   http://10.10.11.58/.git/info/exclude
+200   476B   http://10.10.11.58/.git/logs/
+301   319B   http://10.10.11.58/.git/logs/refs    -> REDIRECTS TO: http://10.10.11.58/.git/logs/refs/
+200   230B   http://10.10.11.58/.git/logs/HEAD
+200   650B   http://10.10.11.58/.git/hooks/
+301   325B   http://10.10.11.58/.git/logs/refs/heads    -> REDIRECTS TO: http://10.10.11.58/.git/logs/refs/heads/
+200   230B   http://10.10.11.58/.git/logs/refs/heads/master
+301   320B   http://10.10.11.58/.git/refs/heads    -> REDIRECTS TO: http://10.10.11.58/.git/refs/heads/
+200    41B   http://10.10.11.58/.git/refs/heads/master
+301   319B   http://10.10.11.58/.git/refs/tags    -> REDIRECTS TO: http://10.10.11.58/.git/refs/tags/
+200   461B   http://10.10.11.58/.git/refs/
+200   337KB  http://10.10.11.58/.git/index
+403   276B   http://10.10.11.58/.ht_wsr.txt
+200     2KB  http://10.10.11.58/.git/objects/
+403   276B   http://10.10.11.58/.htaccess.bak1
+403   276B   http://10.10.11.58/.htaccess.sample
+403   276B   http://10.10.11.58/.htaccess.save
+403   276B   http://10.10.11.58/.htaccess.orig
+403   276B   http://10.10.11.58/.htaccess_extra
+403   276B   http://10.10.11.58/.htaccess_sc
+403   276B   http://10.10.11.58/.htaccessBAK
+403   276B   http://10.10.11.58/.htaccessOLD
+403   276B   http://10.10.11.58/.htaccessOLD2
+403   276B   http://10.10.11.58/.htaccess_orig
+403   276B   http://10.10.11.58/.html
+403   276B   http://10.10.11.58/.htm
+403   276B   http://10.10.11.58/.htpasswd_test
+403   276B   http://10.10.11.58/.htpasswds
+403   276B   http://10.10.11.58/.httr-oauth
+403   276B   http://10.10.11.58/.php
+301   309B   http://10.10.11.58/core    -> REDIRECTS TO: http://10.10.11.58/core/
+200   608B   http://10.10.11.58/core/
+301   310B   http://10.10.11.58/files    -> REDIRECTS TO: http://10.10.11.58/files/
+200   585B   http://10.10.11.58/files/
+403   276B   http://10.10.11.58/icons/
+404     2KB  http://10.10.11.58/index.php/login/
+200   456B   http://10.10.11.58/layouts/
+200     7KB  http://10.10.11.58/LICENSE.txt
+301   312B   http://10.10.11.58/modules    -> REDIRECTS TO: http://10.10.11.58/modules/
+200   399B   http://10.10.11.58/modules/
+200     5KB  http://10.10.11.58/README.md
+200   528B   http://10.10.11.58/robots.txt
+403   276B   http://10.10.11.58/server-status/
+403   276B   http://10.10.11.58/server-status
+200     0B   http://10.10.11.58/settings.php
+301   310B   http://10.10.11.58/sites    -> REDIRECTS TO: http://10.10.11.58/sites/
+200   486B   http://10.10.11.58/sites/
+301   311B   http://10.10.11.58/themes    -> REDIRECTS TO: http://10.10.11.58/themes/
+200   454B   http://10.10.11.58/themes/
