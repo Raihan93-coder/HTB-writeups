@@ -1,7 +1,7 @@
 # 🐶Dog
 
 ## 🧠Summary
-> The vulnarablity found is LFI (local file inclusion).
+> The vulnerablity found is LFI (local file inclusion).
 > A content managment system called as CMS backdrop is used.
 > After accessing the system, I found a web-based program that runs without root privileges but still gives root access.
 
@@ -32,13 +32,13 @@
 - Used this obtained creds to login to the webpage
 
 ## 🛜Step 4 (Web admin access)
-- As gained the web admin access used the CVE found in Backdrop CMS (Remote code exicution)
+- I gained the web admin access and used the CVE found in Backdrop CMS (Remote code exicution)
 - Uploaded this file into the webpage 👉 [shell.tar](./shell/shell.tar)
 - Then used the link "http://dog.htb/module/shell/shell.php?cmd=cat+%2f/etc/passwd"
 - Got 2 users jobert and johncusack
 
 ## 🌐Step 5 (Foothold)
-- Using the above optained username and the earlier password enter the system using ssh
+- Using the above obtained username and the earlier password enter the system using ssh
 - jobert (❎ failed)
 - johncusack (✅ success)
 - Did sudo -l and found that johncusack can run an application called bee
