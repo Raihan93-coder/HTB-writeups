@@ -14,7 +14,7 @@
 - The ssh and http ports are open
 
 ## 🖥️Step 2 (Web enumeration)
-- Used Gobuster to enumerate the webpage
+- Used dirsearch to enumerate the webpage
   ```bash
   dirsearch -u http://dog.htb/
   ```
