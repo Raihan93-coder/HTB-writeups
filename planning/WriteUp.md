@@ -14,7 +14,7 @@
 ## 🌐Step 2 (Web enumeration)
 - Did web enumeration manual and used dirsearch but found nothing useful
   ![](./screenshots/dirsearch.png)
-- As a result decided to find if any subdomain exist, used gobuster and a custom generated wordlist from chatgpt
+- As a result I decided to find if any subdomain exist, used gobuster and a custom generated wordlist from chatgpt
   ```bash
   gobuster dns -d planning.htb -w /home/raihan/Documents/m_planning/wordlist.txt --no-error
   ```
@@ -30,7 +30,7 @@
   ```bash
   git clone https://github.com/nollium/CVE-2024-9264
   ```
-- Executed the downloaded exploit and tryed to dump the /etc/passwd file and found out that the output shows that it is the root of docker
+- Executed the downloaded exploit and tried to dump the /etc/passwd file and found out that the output shows that it is the root of docker
 - So used LinEnum.sh to escape from the docker
 - After hosting LinEnum in my machine used the command
   ```bash
@@ -47,10 +47,10 @@
   ssh enzo@planning.htb
   ```
 - Gained the shell and obtained the user flag
-- Checked if any binary misconfig or any non password executable binary exist but non
+- Checked if any binary misconfig or any non password executable binary exist, but none
 - Proceeded on checking each directory and found a crontab.db
 - Cat the file and found a password
-- Further checked if any additional proccess is happening using
+- Further checked if any additional proccess is happening, using
   ```bash
   netstat -tulpn
   ```
