@@ -2,8 +2,6 @@
 
 ## 🧠Summary
   > The target machine "Planning" exposes a misconfigured Grafana 11 instance on a subdomain, grafana.planning.htb, which is vulnerable to Remote Code Execution (RCE) via the SQL Expressions feature. This vulnerability, tracked as CVE-2024-9264, allows post-processing of query data using DuckDB, which fails to sanitize user-supplied SQL properly. By exploiting this flaw, we were able to gain remote command execution inside a Docker container. Further enumeration led to credential discovery and access to a Crontab UI interface hosted on port 8000. By injecting a reverse shell payload through the scheduler interface, we achieved privilege escalation and accessed the root flag.
-  
-  > The link to the git repo 👉 [https://github.com/nollium/CVE-2024-9264](https://github.com/nollium/CVE-2024-9264)
 
 ## 🔎Step 1 (Nmap scan)
 - Did a Nmap scan to determine the open ports in the machine
