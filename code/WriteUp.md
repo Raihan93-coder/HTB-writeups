@@ -3,6 +3,19 @@
 ## 🧠Summary
  >The machine hosted a restricted Python code editor on port 5000, blacklisting keywords like import and os. After discovering that subprocess.Popen was accessible via __subclasses__()[317], I crafted a reverse shell payload to gain Docker access. Inside the container, I found a database.db containing hashed credentials. After cracking the hash, I SSH’ed into the main system. Privilege escalation was achieved via a vulnerable backy.sh script that processed a crafted JSON payload to dump /root via a .tar file, revealing the root flag.
 
+## ↘️ACSII Visual
+```css
+[ Code Editor ("port 5000") ]
+           ↓
+[ Reverse Shell via __subclasses__ ]
+           ↓
+[ Docker Shell → Find "database.db" ]
+           ↓
+[ Crack Hash → SSH → sudo -l ]
+           ↓
+[ Exploit "backy.sh" → Root Access ]
+```
+
 ## 🔎Step 1 (Nmap scan)
 - Did a Nmap scan to determine the open ports in the machine
   ```bash
