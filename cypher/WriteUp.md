@@ -4,7 +4,7 @@
 > After web and service enumeration revealed a small attack surface, I discovered an overlooked component that accepted unsanitised input, giving me remote code execution and an initial low-privilege shell. Local recon exposed clear-text credentials for a second user, and a misconfigured sudo-allowed utility let me read restricted files—ultimately granting access to both user and root flags.
 
 ## ↘️ACSII Visual
-```css
+```text
 [ Nmap Scan ]
      |
      v
