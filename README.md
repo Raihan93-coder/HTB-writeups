@@ -5,3 +5,4 @@
 - 🐶 [Dog](./dog/Writeup.md)
 - 🗂️ [Planning](./planning/WriteUp.md)
 - 👨‍💻 [Code](./code/WriteUp.md)
+- 🧮 [Cypher](./cypher/WriteUp.md)
