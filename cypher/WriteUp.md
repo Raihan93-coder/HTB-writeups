@@ -3,7 +3,7 @@
 ## 🧠Summary
 > After web and service enumeration revealed a small attack surface, I discovered an overlooked component that accepted unsanitised input, giving me remote code execution and an initial low-privilege shell. Local recon exposed clear-text credentials for a second user, and a misconfigured sudo-allowed utility let me read restricted files—ultimately granting access to both user and root flags.
 
-## ↘️ACSII Visual
+## ↘️ASCII Visual
 ```text
 [ Nmap Scan ]
      |
@@ -48,12 +48,12 @@
   ![](./screenshot/nmap_scan.png)
 
 ## 🌐Web enumeration
-- Did web enumeration using dirsearch and found out that a page testing exsist
+- Did web enumeration using dirsearch and found out that a page testing exist
 - Went into that page to find a .jar file that has the java .class code
   ![](./screenshot/java.png)
 
 ## 📌Loop hole
-- Used a online decompiler to view the code and found a critical vunerablity
+- Used a online decompiler to view the code and found a critical vulnerablity 
   ![](./screenshot/java.png)
 - It failed to sanitize the url field
 - Started a Burp Suite session and and checked the /login page
