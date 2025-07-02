@@ -6,3 +6,4 @@
 - 🗂️ [Planning](./planning/WriteUp.md)
 - 👨‍💻 [Code](./code/WriteUp.md)
 - 🧮 [Cypher](./cypher/WriteUp.md)
+- 🐱 [Cat](./cat/WriteUp.md)
