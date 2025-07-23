@@ -8,3 +8,4 @@
 - 🧮 [Cypher](./cypher/WriteUp.md)
 - 🐱 [Cat](./cat/WriteUp.md)
 - 🤖 [Artificial](./artificial/WriteUp.md)
+- 🎣 [Eureka](./eureka/WriteUp.md)
