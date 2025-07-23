@@ -56,7 +56,7 @@ inject revshell into application.log
 - Found an open port also in the found file entered the website using the open port and found a webpage called spring eureka
   ![](./screenshots/port8761-webpage.png)
 - Found a medium post that talks about eureka RCE 👉 [Eureka-RCE](https://medium.com/@mfocuz/hacking-netflix-eureka-8e5957b2f539)
-- After that wrote a custom script to in bash using (nc + curl)
+- After that wrote a custom script in bash using (nc + curl)
   ![](./screenshots/exploit.png)
 - The link to custom script 👉 [exploit.sh](./exploit.sh)
 - I got the password and username the password was encrypted so used cyberchef to decode it and found the password
