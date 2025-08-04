@@ -9,3 +9,4 @@
 - 🐱 [Cat](./cat/WriteUp.md)
 - 🤖 [Artificial](./artificial/WriteUp.md)
 - 🎣 [Eureka](./eureka/WriteUp.md)
+- 📨 [Outbound](./outbound/WriteUp.md)
