@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Body */
+        body {
+            background-color: #ffffff;
+            color: #2f2f2f;
+            line-height: 1.6;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        /* Header */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Form */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            background-color: #fafafa;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Star Rating */
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 2rem;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .star-rating input:checked ~ label {
+            color: #007bff;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #0056b3;
+        }
+
+        /* Button */
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Reviews List */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reviews</h1>
+        <form method="POST" action="/reviews">
+            <textarea name="comment" placeholder="Your comment" required></textarea>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="stars" value="5" required>
+                <label for="star5">&#9733;</label>
+                <input type="radio" id="star4" name="stars" value="4">
+                <label for="star4">&#9733;</label>
+                <input type="radio" id="star3" name="stars" value="3">
+                <label for="star3">&#9733;</label>
+                <input type="radio" id="star2" name="stars" value="2">
+                <label for="star2">&#9733;</label>
+                <input type="radio" id="star1" name="stars" value="1">
+                <label for="star1">&#9733;</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <ul>
+            {% for review in reviews %}
+            <li>
+                <strong>{{ review.user }}</strong> ({{ review.stars }} stars): {{ review.comment }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+

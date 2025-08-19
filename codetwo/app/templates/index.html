@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to CodeTwo</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Landing Section -->
+    <div class="landing">
+        <div class="overlay"></div>
+        <div class="landing-content">
+            <h1>Welcome to CodeTwo</h1>
+            <p>Empowering developers to create, code, and run their projects with ease.</p>
+            <p><strong>CodeTwo is open-source</strong>, built by developers for developers. Join us in shaping the future of collaborative coding.</p>
+            <br>
+            {% if 'user_id' in session %}
+                <a href="{{ url_for('dashboard') }}" class="cta-button">Go to Dashboard</a>
+                <a href="{{ url_for('reviews') }}" class="cta-button">Reviews</a>
+            {% else %}
+                <a href="{{ url_for('login') }}" class="cta-button">Login</a>
+                <a href="{{ url_for('register') }}" class="cta-button">Register</a>
+            {% endif %}
+            <br><br><a href="{{ url_for('download') }}" class="cta-button">Download App</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2>About CodeTwo</h2>
+            <p>At CodeTwo, we provide a platform designed to help developers quickly write, save, and run their JavaScript code. Whether you're working on personal projects or collaborating with a team, CodeTwo offers the tools you need to bring your ideas to life.</p>
+            <p>Our mission is to make coding accessible and efficient, giving you the power to focus on what matters most—building great software.</p>
+        </div>
+    </section>
+
+    <!-- Open-Source Section -->
+    <section class="open-source-section">
+        <div class="container">
+            <h2>Why Open Source?</h2>
+            <p>We believe in the power of community-driven development. By being open-source, CodeTwo allows developers worldwide to contribute, learn, and grow together. Explore our repository, submit your ideas, and make a difference!</p>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+

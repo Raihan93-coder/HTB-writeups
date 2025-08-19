@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeTwo Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Dashboard</h1>
+            <p>Create, save, run, and manage your JavaScript code with CodeTwo.</p><br>
+            <a href="{{ url_for('logout') }}" class="cta-button">Logout</a>
+        </header>
+
+        <!-- Code Editor Section -->
+        <section class="editor-section">
+            <h2>Code Editor</h2>
+            <div class="editor-container">
+                <textarea id="codeEditor" placeholder="var x = 16;&#10;x;"></textarea>
+            </div>
+            <div class="button-group">
+                <button id="saveButton" class="primary-btn">Save Code</button>
+                <button id="runButton" class="secondary-btn">Run Code</button>
+            </div>
+        </section>
+
+        <!-- Output Section -->
+        <section class="output-section">
+            <h2>Output</h2>
+            <div id="outputContainer" class="output-box"></div>
+        </section>
+
+        <!-- Saved Codes Section -->
+        <section class="saved-codes-section">
+            <h2>Saved Codes</h2>
+            <ul id="codeList" class="code-list">
+                {% for code in codes %}
+                    <li class="code-item">
+                        <a href="#" class="code-link" data-code="{{ code.code }}">Code {{ code.id }}</a>
+                        <button class="delete-code-btn" data-code-id="{{ code.id }}">Delete</button>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
